@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
+function getValueFromRange(x, min, max) {
+  return (((max - min) * x) / 100) + min;
+}
+
 export const BoxCreatorView = styled.div`
   display: flex;
 `;
