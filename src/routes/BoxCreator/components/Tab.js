@@ -1,7 +1,13 @@
 import React from 'react';
 
 function Tab(props) {
-  return props.tab === props.index ? props.children : null;
+  const visible = props.tab === props.index;
+
+  return (
+    <div style={{ display: visible ? 'initial' : 'none' }}>
+      {props.children}
+    </div>
+  );
 }
 
 export default Tab;

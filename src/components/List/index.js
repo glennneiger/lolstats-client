@@ -1,20 +1,26 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-const TabButton = styled.button`
-  user-select: none;
-  outline: none;
+export const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+export const ListItem = styled.li`
   display: inline-flex;
   user-select: none;
   font-weight: bold;
   font-size: ${rem('16px')};
+  display: flex;
   padding: 8px 10px 7px 10px;
-  background-color: ${(props) => props.active ? '#d3e4ff' : '#F6F6F6'};
-  border-style: none;
+  background-color: #F6F6F6;
   border-radius: ${rem('3px')};
   color: #428dff;
+
   transition: background-color 0.2s ease;
-  margin-right: ${rem('5px')};
+
+  margin-bottom: ${rem('5px')};
 
   &:hover {
     cursor: pointer;
@@ -25,5 +31,3 @@ const TabButton = styled.button`
     background-color: #bad4ff;
   }
 `;
-
-export default TabButton;

@@ -38,7 +38,7 @@ const InputColorContainer = styled.div`
 export default function InputColor(props) {
   return (
     <InputColorContainer>
-      <span>{`${props.label} (${props.value})`}</span>
+      <span>{props.label}</span>
       <Popover placement='left' arrow={false}>
         <InputColorButton>
           <ColorBox value={props.value} />

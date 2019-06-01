@@ -6,10 +6,6 @@ const InputRangeContainer = styled.div`
   display: flex;
   align-items: center;
 
-  & > span {
-
-  }
-
   & > input {
     margin-left: auto;
   }
@@ -45,7 +41,7 @@ const InputRangeComponent = styled.input`
 export default function InputRange(props) {
   return (
     <InputRangeContainer>
-      <span>{`${props.label} (${props.value})`}</span>
+      <span>{props.label}</span>
       <InputRangeComponent
         type='range'
         min={props.min}

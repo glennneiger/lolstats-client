@@ -1,0 +1,39 @@
+{
+  "global": {
+    "padding": 9,
+    "textColor": "rgba(255,255,255,1)",
+    "textShadow": {
+      "h": 2,
+      "v": 2,
+      "b": 2,
+      "color": "rgba(0,0,0,0.63)"
+    }
+  },
+  "boxContainer": {
+    "backgroundColor": "rgba(39,129,166,1)",
+    "borderRadius": 0,
+    "borderWidth": 7,
+    "borderColor": "rgba(27,27,27,1)",
+    "boxShadow": {
+      "b": 20,
+      "color": "black"
+    }
+  },
+  "profileIcon": {
+    "enabled": true,
+    "size": 20,
+    "borderRadius": 0,
+    "borderWidth": 7,
+    "borderColor": "rgba(27,27,27,1)"
+  },
+  "summonerInfo": {
+    "textAlign": "center",
+    "colorizedDivision": true,
+    "colorizedWinRate": true,
+    "spaceBetween": 0
+  },
+  "leagueIcon": {
+    "enabled": true,
+    "size": 20
+  }
+}

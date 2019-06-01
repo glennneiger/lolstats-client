@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import set from 'lodash/set';
+import merge from 'lodash/merge';
 
 function getValueFromEvent(event) {
   if (event.rgb) {
@@ -25,7 +26,11 @@ function useStyleData(initialData) {
     setData(set({...data}, keypath, value));
   };
 
-  return [data, setStyleData];
+  const setAllStyle = (newData) => {
+    setData(merge({}, newData));
+  };
+
+  return [data, setStyleData, setAllStyle];
 }
 
 export default useStyleData;
