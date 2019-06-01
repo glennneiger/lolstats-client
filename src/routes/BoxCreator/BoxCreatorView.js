@@ -29,19 +29,19 @@ export default function BoxCreator() {
   const riotData = {
     cdnVersion: '9.10.1', // http://ddragon.leagueoflegends.com/cdn/9.10.1/img/profileicon/${588}.png
     summonerData: {
-      name: 'Summoner Name',
-      profileIconId: 586,
+      name: 'Lobo Bot',
+      profileIconId: 1600,
     },
     entryData: {
       queueType: 'RANKED_SOLO_5x5',
-      leaguePoints: 90,
+      leaguePoints: 1400,
       wins: 300,
       losses: 150,
       veteran: true,
-      rank: 'DIAMOND',
+      rank: 'CHALLENGER',
       inactive: false,
       freshBlood: false,
-      tier: 'III',
+      tier: 'I',
       hotStreak: false,
       miniSeries: {
         progress: 'WWLLN',
