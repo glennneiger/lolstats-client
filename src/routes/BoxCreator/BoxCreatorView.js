@@ -30,7 +30,7 @@ export default function BoxCreator() {
     cdnVersion: '9.10.1', // http://ddragon.leagueoflegends.com/cdn/9.10.1/img/profileicon/${588}.png
     summonerData: {
       name: 'Summoner Name',
-      profileIconId: 588,
+      profileIconId: 586,
     },
     entryData: {
       queueType: 'RANKED_SOLO_5x5',
