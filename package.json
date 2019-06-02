@@ -10,6 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@welldone-software/why-did-you-render": "^3.0.9",
     "axios": "^0.18.0",
+    "history": "^4.9.0",
     "lodash": "^4.17.11",
     "polished": "^3.3.2",
     "react": "^16.8.6",

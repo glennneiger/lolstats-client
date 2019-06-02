@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router as BrowserRouter, Route } from 'react-router-dom';
+
+import history from '../utils/history';
 
 import Home from './Home';
 import TwitchCallback from './TwitchCallback';
@@ -8,7 +10,7 @@ import BoxCreator from './BoxCreator';
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter history={history}>
       <Route path='/' exact component={Home} />
       <Route path='/twitch-callback' exact component={TwitchCallback} />
       <Route path='/dashboard' exact component={Dashboard} />

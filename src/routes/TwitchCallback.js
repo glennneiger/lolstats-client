@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { rem } from 'polished';
+
+import history from '../utils/history';
+
+import MainLayout from '../layouts/MainLayout';
+
+const Section = styled.section`
+  padding: ${rem('10px')};
+`;
 
 export default function TwitchCallback() {
-  const [token, setToken] = useState(null);
+  const [, setToken] = useState(null);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -11,16 +20,18 @@ export default function TwitchCallback() {
 
     axios({ method: 'post', url: '/login', data: { code } })
       .then((response) => {
-        console.log(response.data);
         axios.defaults.headers['Authorization'] = `Bearer ${response.data}`;
-        setToken(axios.defaults.headers['Authorization'])
+        setToken(axios.defaults.headers['Authorization']);
+
+        history.push('/dashboard');
       });
   }, [])
 
   return (
-    <div>
-      <h2>TwitchCallback</h2>
-      {token && <Link to='/dashboard'>Dashboard</Link>}
-    </div>
+    <MainLayout>
+      <Section>
+        Signing in...
+      </Section>
+    </MainLayout>
   )
 }

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import MainLayout from '../layouts/MainLayout';
+import Section from '../components/Section';
+
 export default function Dashboard() {
   const [summonerName, setSummonerName] = useState('MrHotRock');
   const [region, setRegion] = useState('');
@@ -23,17 +26,20 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>Summoner name</p>
-      <input name='summonerName' value={summonerName} onChange={(event) => setSummonerName(event.target.value)} />
-      <p>Region</p>
-      <select name='region' value={region} onChange={(event) => setRegion(event.target.value)}>
-        {regionList.map(({ key, value }) => (
-          <option key={key} value={key}>{value}</option>
-        ))}
-      </select>
-      <button onClick={sendData}>Send</button>
-    </div>
+    <MainLayout>
+      <Section>
+        <h2>Dashboard</h2>
+        <p>Summoner name</p>
+        <input name='summonerName' value={summonerName} onChange={(event) => setSummonerName(event.target.value)} />
+        <p>Region</p>
+        <select name='region' value={region} onChange={(event) => setRegion(event.target.value)}>
+          {regionList.map(({ key, value }) => (
+            <option key={key} value={key}>{value}</option>
+          ))}
+        </select>
+        <button onClick={sendData}>Send</button>
+      </Section>
+    </MainLayout>
   )
 }
+
